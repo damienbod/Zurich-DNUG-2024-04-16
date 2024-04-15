@@ -4,3 +4,7 @@
 
 
 https://www.meetup.com/de-DE/dotnet-zurich/events/299331660/
+
+## Links
+
+https://github.com/damienbod/Blazor.BFF.AzureAD.Template
