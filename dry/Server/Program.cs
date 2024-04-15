@@ -1,5 +1,6 @@
 ﻿using dry.Server;
 using dry.Server.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
@@ -41,7 +42,7 @@ services.AddMicrosoftIdentityWebAppAuthentication(configuration)
 services.AddControllersWithViews(options =>
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()));
 
-services.AddSingleton<UserAdminHandler>();
+services.AddSingleton<IAuthorizationHandler, UserAdminHandler>();
 
 services.AddAuthorization(options =>
 {
